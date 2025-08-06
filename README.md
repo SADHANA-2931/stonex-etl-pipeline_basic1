@@ -1,36 +1,47 @@
-# 📊 StoneX ETL Data Pipeline Project (Beginner Friendly)
+# ETL Data Pipeline Project
 
-This is a beginner-friendly **ETL (Extract, Transform, Load)** pipeline project built using **Python**, **Pandas**, and **SQLite**.  
-It simulates a real-world **financial data pipeline** you might encounter in an apprenticeship at **StoneX** or other global fintech companies.
+This project demonstrates a basic ETL (Extract, Transform, Load) pipeline using Python, Pandas, and SQLite. It simulates a stock trading scenario by processing raw trade data, performing transformations, filtering high-value trades, and storing the results for querying.
 
----
+## Features
 
-## 🚀 Project Overview
+- Load raw trade data from CSV
+- Calculate total trade value (`price × volume`)
+- Filter trades with value > 50,000
+- Save the cleaned data to a new CSV file
+- Store filtered data in a SQLite database
+- Run SQL queries to extract insights
 
-This mini-project mimics how stock market trade data is:
-- 📥 Extracted from a CSV file
-- 🔧 Transformed by applying business rules
-- 🗃️ Loaded into a database for querying
+## Tech Stack
 
-It includes:
-- Reading raw stock trade data
-- Adding a new column `trade_value = price * volume`
-- Filtering only high-value trades (above ₹50,000)
-- Storing cleaned data in both CSV and SQLite database
-- Querying specific results using SQL
+- Python 3.13
+- Pandas
+- SQLite
+- VS Code
 
----
+## Files
 
-## 📁 Project Structure
+- `stock_data.csv` – Sample trade data
+- `read_stock_data.py` – Extracts and transforms data
+- `high_value_trades.csv` – Output after filtering
+- `load_to_sqlite.py` – Loads data into SQLite
+- `query_db.py` – Queries database for results
+
+## How to Run
 
 ```bash
-stonex_etl_project/
-│
-├── stock_data.csv            # Sample input data
-├── high_value_trades.csv     # Output after filtering
-│
-├── read_stock_data.py        # Extract + Transform + Filter + Save
-├── load_to_sqlite.py         # Load cleaned data into SQLite DB
-├── query_db.py               # SQL query to fetch specific records
-├── hello.py                  # Initial test script
-└── README.md                 # This file
+python read_stock_data.py
+python load_to_sqlite.py
+python query_db.py
+Use Case
+Built for showcasing beginner-level data engineering skills aligned with StoneX apprenticeship expectations.
+
+yaml
+Copy
+Edit
+
+---
+
+You can now:
+1. Save this as `README.md`
+2. Run `git add README.md && git commit -m "Add README"`  
+3. Then push: `git push origin main`
